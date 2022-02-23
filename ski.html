@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- /////////////////////////// BOOTSTRAP CSS ////////////////////////////// -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- /////////////////////////// GOOGLE FONT ////////////////////////////// -->
+    <link rel="stylesheet" href="https://use.typekit.net/ugk3wuz.css">
+
+    <!-- /////////////////////////// CUSTOM CSS ////////////////////////////// -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- /////////////////////////// JQUERY ///////////////////////////////// -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Skiing and snowboarding lessons and rental</title>
+
+    <!-- URL :  http://winteradventures.infinityfreeapp.com -->
+</head>
+
+
+<body>
+
+    <!-- /////////////////////////// NAVIGATION ////////////////////////////// -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top" id="skinav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-middle mb-3 mb-lg-0" href="#"><canvas id="myCanvas"></canvas>Winter Adventures</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lessons">Lessons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rental">Rental</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stations">Stations</a>
+                    </li>
+                    <!-- on off button for music -->
+                </ul>
+                <button class="btn text-white d-flex ps-0 ms-0 d-md-inline ms-md-3" id="play">Music On/Off</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- audio track -->
+    <audio src="media/audio/blizzard.mp3" id="myAudio"></audio>
+
+    <!-- /////////////////////////// INTRODUCTION ////////////////////////////// -->
+
+    <!-- header random image -->
+    <div id="random">
+        <div class="container-fluid px-0 mb-0" id="header-img">
+            <img id="random-image" src="media/ski-page/01.jpg" alt="header image ski and snowboard">
+        </div>
+    </div>
+
+    <!-- title -->
+    <div class="container text-center mb-md-5 mt-5 mt-md-0" id="intro">
+        <p class="title mb-2 text-info h2" id="nameTitle"></p>
+        <h2 class="section-title">SKI AND SNOWBOARD MADE EASY</h2>
+
+        <!-- illustrations -->
+        <div class="row mb-4 mb-md-0">
+            <!-- lessons -->
+            <div class="col-md-4">
+                <img src="media/ski-page/lesson.svg" alt="snowboard icon" class="icons">
+                <h4 class="mb-3 mt-0">LESSONS</h4>
+                <p class="px-2 px-lg-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quis
+                    quasi fugiat minima ullam cumque recusandae quas culpa saepe porro?</p>
+                <a href="#lessons" class="btn btn-info text-white">Book a lesson</a>
+            </div>
+            <!-- rental -->
+            <div class="col-md-4">
+                <img src="media/ski-page/rental.svg" alt="ski icon" class="icons">
+                <h4 class="mb-3 mt-0">RENTAL</h4>
+                <p class="px-2 px-lg-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quis
+                    quasi fugiat minima ullam cumque recusandae quas culpa saepe porro?</p>
+                <a href="#rental" class="btn btn-info text-white">Rent your gears</a>
+            </div>
+            <!-- stations -->
+            <div class="col-md-4">
+                <img src="media/ski-page/stations.svg" alt="mountain icon" class="icons">
+                <h4 class="mb-3 mt-0">OUR STATIONS</h4>
+                <p class="px-2 px-lg-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quis
+                    quasi fugiat minima ullam cumque recusandae quas culpa saepe porro?</p>
+                <a href="#stations" class="btn btn-info text-white">Discover our stations</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- separator -->
+    <img src="media/ski-page/flakes.svg" alt="snowflakes icons" class="flakes mb-4">
+
+    <!-- /////////////////////////// LESSONS ////////////////////////////// -->
+    <section id="lessons">
+        <div class="container">
+            <!-- introduction -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="mb-2 section-title">BOOK A LESSON</h2>
+                    <p class="px-3 px-lg-5 py-4 col-lg-8 offset-lg-2">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Perferendis repellendus excepturi ipsa consectetur obcaecati numquam esse
+                        sequi quod dolorem, fugiat, similique magni id quis enim.</p>
+                </div>
+            </div>
+
+            <!-- LESSONS PRICE - added nov 2021 -->
+            <div class="container bg-light py-5 px-3 px-sm-5">
+                <!-- intro -->
+                <div class="text-center mb-4">
+                    <h4 class="mb-4">LESSONS PRICE CALCULATOR</h4>
+                    <p>Learn for our professional team and get10% discount when you book for 4 people and more.<br>
+                    </p>
+                </div>
+
+                <!-- price table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Package</th>
+                            <th scope="col">Ski lessons</th>
+                            <th scope="col">Snowboard lessons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Economy</th>
+                            <td>£90</td>
+                            <td>£119</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Intermediate</th>
+                            <td>£120</td>
+                            <td>£145</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Performance</th>
+                            <td>£145</td>
+                            <td>£170</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="text-muted mb-5">(prices per week per person)</p>
+
+                <!-- form -->
+                <form>
+                    <!-- station choice -->
+                    <div class="row">
+                        <h4 class="text-info">Choice of location</h4>
+                        <div class="col-lg-6 mb-4">
+                            <label class="mb-2 ps-1">Where are you going ?</label>
+                            <select class="form-select" aria-label="Default select example" id="station2">
+                                <option selected>Select a station</option>
+                                <option value="morzine2">Morzine</option>
+                                <option value="tignes2">Tignes</option>
+                                <option value="tania2">La Tania</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h4 class="text-info">Rental details</h4>
+                    <div class="row">
+                        <!-- package choice -->
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <label class="mb-2 ps-1">What package ?</label>
+                            <select class="form-select" aria-label="Default select example" id="package2">
+                                <option selected>Select a package</option>
+                                <option value="eco2">Economy</option>
+                                <option value="int2">Intermediate</option>
+                                <option value="perf2">Performance</option>
+                            </select>
+                        </div>
+                        <!-- number of weeks -->
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <label for="weeks2" class="mb-2 ps-1">Rental duration</label>
+                            <input class="form-control" type="number" placeholder="How many weeks?"
+                                aria-label="default input example" id="weeks2">
+                        </div>
+                        <!-- ski rental -->
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <label for="ski2" class="mb-2 ps-1">Ski, Boots & Poles</label>
+                            <input class="form-control" type="number" placeholder="How many people?"
+                                aria-label="default input example" id="ski2">
+                        </div>
+                        <!-- snowboard rental -->
+                        <div class="col-md-6 col-lg-3">
+                            <label for="snow2" class="mb-2 ps-1">Snowboard & Boots</label>
+                            <input class="form-control" type="number" placeholder="How many people?"
+                                aria-label="default input example" id="snow2">
+                        </div>
+                    </div>
+                </form>
+                <!-- outro -->
+                <div class=" mt-4 text-center">
+                    <!-- button -->
+                    <button id="calc2" class="text-center btn btn-info text-white">CALCULATE</button>
+                    <!-- user feedback -->
+                    <p id="feedback2" class="mt-4"></p>
+                    <p id="sum2"></p>
+                </div>
+            </div>
+
+
+            <!-- CODE FROM HNC ASSESSMENT 2020 
+                ACCORDION LESSONS
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        MORZINE HEADER
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">MORZINE</button></h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            MORZINE BDOY 
+                            <div class="accordion-body">
+                                <div class="row py-3">
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SKI LESSONS</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SNOWBOARD LESSONS</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">GROUP LESSONS</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info text-white mb-4">LEARN WITH OUR MORZINE TEAM</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        TIGNES HEADER
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                TIGNES</button></h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            TIGNES BODY
+                            <div class="accordion-body">
+                                <div class="row py-3">
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SKI LESSONS</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SNOWBOARD LESSONS</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">GROUP LESSONS</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info text-white mb-4">LEARN WITH OUR TIGNES TEAM</button>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            LA TANIA HEADER
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">LA TANIA</button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                LA TANIA BODY
+                                <div class="accordion-body">
+                                    <div class="row py-3">
+                                        <div class="col-lg-4">
+                                            <p><span style="text-decoration:underline">SKI LESSONS</span><br>
+                                                1 Day- €30 <br>
+                                                2 Day- €44 <br>
+                                                3 Day- €59 <br>
+                                                4 Day- €78 <br>
+                                                5 Day- €88 <br>
+                                                6 Day- €97 <br>
+                                                7 Day- €105 <br>
+                                                Each additional day – €8</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p><span style="text-decoration:underline">SNOWBOARD
+                                                    LESSONS</span><br>
+                                                1 Day- €30 <br>
+                                                2 Day- €44 <br>
+                                                3 Day- €59 <br>
+                                                4 Day- €78 <br>
+                                                5 Day- €88 <br>
+                                                6 Day- €97 <br>
+                                                7 Day- €105 <br>
+                                                Each additional day – €8</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p><span style="text-decoration:underline">GROUP LESSONS</span><br>
+                                                1 Day- €30 <br>
+                                                2 Day- €44 <br>
+                                                3 Day- €59 <br>
+                                                4 Day- €78 <br>
+                                                5 Day- €88 <br>
+                                                6 Day- €97 <br>
+                                                7 Day- €105 <br>
+                                                Each additional day – €8</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-info text-white mb-4">LEARN WITH OUR LA TANIA
+                                        TEAM</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            <!-- video intro -->
+            <div class="row pt-4 pt-lg-5">
+                <div class="col-12 text-center">
+                    <h4 class="mt-3">MEET OUR INSTRUCTORS</h4>
+                    <p class="px-3 px-lg-5 py-4 col-lg-8 offset-lg-2 text-center">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Perferendis repellendus excepturi ipsa consectetur obcaecati numquam esse
+                        sequi quod dolorem, fugiat.</p>
+                </div>
+            </div>
+
+
+            <!-- videos -->
+            <div class="row pb-3 pb-lg-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/g0FMrjsYAzc" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/1TJ08caetkw" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- contact button -->
+            <div class="text-center pb-3">
+                <p class="mb-0 pb-2">Need help with you booking?</p>
+                <a href="index.html#contact" class="btn btn-info text-white">CONTACT US</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- separator -->
+    <img src="media/ski-page/flakes.svg" alt="snowflakes icon" class="flakes mb-4">
+
+    <!-- /////////////////////////// RENTAL ////////////////////////////// -->
+
+    <section id="rental">
+        <div class="container">
+
+            <!-- intro -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="mb-2 section-title">RENT THE GEARS YOU NEED</h2>
+                    <p class="px-3 px-lg-5 py-4 col-lg-8 offset-lg-2">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Perferendis repellendus excepturi ipsa consectetur obcaecati numquam esse
+                        sequi quod dolorem, fugiat, similique magni id quis enim.</p>
+                </div>
+            </div>
+
+            <!-- RENTAL CALCULATOR - added nov 2021 -->
+            <div class="container bg-light py-5 px-3 px-sm-5">
+                <!-- intro -->
+                <div class="text-center mb-4">
+                    <h4 class="mb-4">GEAR RENTAL CALCULATOR</h4>
+                    <p>Rent our gear at the best price and get a 10% discount when you rent for 4 people and more.<br>
+                    </p>
+                </div>
+
+                <!-- price table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Package</th>
+                            <th scope="col">Ski, Boots & Poles</th>
+                            <th scope="col">Snowboard & Boots</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Economy</th>
+                            <td>£90</td>
+                            <td>£119</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Intermediate</th>
+                            <td>£120</td>
+                            <td>£145</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Performance</th>
+                            <td>£145</td>
+                            <td>£170</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="text-muted mb-5">(prices per week per person)</p>
+
+                <!-- form -->
+                <form>
+                    <div class="row">
+                        <!-- station choice -->
+                        <h4 class="text-info">Choice of location</h4>
+                        <div class="col-lg-6 mb-4">
+                            <label class="mb-2 ps-1">Where are you going ?</label>
+                            <select class="form-select" aria-label="Default select example" id="station">
+                                <option selected>Select a station</option>
+                                <option value="Morzine">Morzine</option>
+                                <option value="Tignes">Tignes</option>
+                                <option value="La Tania">La Tania</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h4 class="text-info">Rental details</h4>
+                    <div class="row">
+                        <!-- package choice -->
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <label class="mb-2 ps-1">What package ?</label>
+                            <select class="form-select" aria-label="Default select example" id="package">
+                                <option selected>Select a package</option>
+                                <option value="eco">Economy</option>
+                                <option value="int">Intermediate</option>
+                                <option value="perf">Performance</option>
+                            </select>
+                        </div>
+                        <!-- number of weeks -->
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <label for="weeks" class="mb-2 ps-1">Rental duration</label>
+                            <input class="form-control" type="number" placeholder="How many weeks?"
+                                aria-label="default input example" id="weeks">
+                        </div>
+                        <!-- ski rental -->
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <label for="ski" class="mb-2 ps-1">Ski, Boots & Poles</label>
+                            <input class="form-control" type="number" placeholder="How many people?"
+                                aria-label="default input example" id="ski">
+                        </div>
+                        <!-- snowboard rental -->
+                        <div class="col-md-6 col-lg-3">
+                            <label for="snow" class="mb-2 ps-1">Snowboard & Boots</label>
+                            <input class="form-control" type="number" placeholder="How many people?"
+                                aria-label="default input example" id="snow">
+                        </div>
+                    </div>
+                </form>
+                <!-- outro -->
+                <div class=" mt-4 text-center">
+                    <!-- button -->
+                    <button id="calc" class="text-center btn btn-info text-white">CALCULATE</button>
+                    <!-- user feedback -->
+                    <p id="feedback" class="mt-4"></p>
+                    <p id="sum"></p>
+                </div>
+            </div>
+
+            <!-- CODE FROM HNC ASSESSMENT 2020
+                ACCORDION RENTAL 
+                <div class="accordion accordion-flush" id="accordionFlushExample2">
+                    <div class="accordion-item">
+                         MORZINE HEADER 
+                        <h2 class="accordion-header" id="flush-headingOne2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne2" aria-expanded="false"
+                                aria-controls="flush-collapseOne2">MORZINE</button></h2>
+                        <div id="flush-collapseOne2" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample2">
+                            MORZINE BODY 
+                            <div class="accordion-body">
+                                <div class="row py-3">
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SKI+POLES RENTAL</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SNOWBOARD RENTAL</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">BOOTS RENTAL</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info text-white mb-4">RENT FROM OUR MORZINE STORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                         TIGNES HEADER 
+                        <h2 class="accordion-header" id="flush-headingTwo2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo2" aria-expanded="false"
+                                aria-controls="flush-collapseTwo2">
+                                TIGNES</button></h2>
+                        <div id="flush-collapseTwo2" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo2" data-bs-parent="#accordionFlushExample2">
+                             TIGNES BODY 
+                            <div class="accordion-body">
+                                <div class="row py-3">
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SKI+POLES RENTAL</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">SNOWBOARD RENTAL</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p><span style="text-decoration:underline">BOOTS RENTAL</span><br>
+                                            1 Day- €30 <br>
+                                            2 Day- €44 <br>
+                                            3 Day- €59 <br>
+                                            4 Day- €78 <br>
+                                            5 Day- €88 <br>
+                                            6 Day- €97 <br>
+                                            7 Day- €105 <br>
+                                            Each additional day – €8</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info text-white mb-4">RENT FROM OUR TIGNES STORE</button>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                             LA TANIA HEADER 
+                            <h2 class="accordion-header" id="flush-headingThree2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree2" aria-expanded="false"
+                                    aria-controls="flush-collapseThree2">
+                                    LA TANIA</button> </h2>
+                            <div id="flush-collapseThree2" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree2" data-bs-parent="#accordionFlushExample2">
+                                 LA TANIA BODY 
+                                <div class="accordion-body">
+                                    <div class="row py-3">
+                                        <div class="col-lg-4">
+                                            <p><span style="text-decoration:underline">SKI+POLES
+                                                    RENTAL</span><br>
+                                                1 Day- €30 <br>
+                                                2 Day- €44 <br>
+                                                3 Day- €59 <br>
+                                                4 Day- €78 <br>
+                                                5 Day- €88 <br>
+                                                6 Day- €97 <br>
+                                                7 Day- €105 <br>
+                                                Each additional day – €8</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p><span style="text-decoration:underline">SNOWBOARD
+                                                    RENTAL</span><br>
+                                                1 Day- €30 <br>
+                                                2 Day- €44 <br>
+                                                3 Day- €59 <br>
+                                                4 Day- €78 <br>
+                                                5 Day- €88 <br>
+                                                6 Day- €97 <br>
+                                                7 Day- €105 <br>
+                                                Each additional day – €8</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p><span style="text-decoration:underline">BOOTS RENTAL</span><br>
+                                                1 Day- €30 <br>
+                                                2 Day- €44 <br>
+                                                3 Day- €59 <br>
+                                                4 Day- €78 <br>
+                                                5 Day- €88 <br>
+                                                6 Day- €97 <br>
+                                                7 Day- €105 <br>
+                                                Each additional day – €8</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-info text-white mb-4">RENT FROM OUR LA TANIA STORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+
+            <!-- video intro -->
+            <div class="row pt-4 pt-lg-5">
+                <div class="col-12 text-center">
+                    <h4 class="mt-3">OUR GEARS IN USE</h4>
+                    <p class="px-3 px-lg-5 py-4 col-lg-8 offset-lg-2 text-center">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Perferendis repellendus excepturi ipsa consectetur obcaecati numquam esse
+                        sequi quod dolorem, fugiat.</p>
+                </div>
+            </div>
+            <!-- vidoe -->
+            <div class="row pb-3 pb-lg-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/JpYzKxoapuk" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/ZkSXRYiw7gs" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- contact button -->
+            <div class="text-center pb-3">
+                <p class="mb-0 pb-2">Need help renting your gears?</p>
+                <a href="index.html#contact" class="btn btn-info text-white">CONTACT US</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- separator -->
+    <img src="media/ski-page/flakes.svg" alt="snowflakes icon" class="flakes mb-4">
+
+
+    <!-- /////////////////////////// STATIONS ////////////////////////////// -->
+    <section id="stations">
+        <div class="container">
+            <!-- introduction -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="mb-2 section-title">DISCOVER OUR STATIONS</h2>
+                    <p class="px-3 px-lg-5 py-4 col-lg-8 offset-lg-2">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Perferendis repellendus excepturi ipsa consectetur obcaecati numquam esse
+                        sequi quod dolorem.</p>
+                </div>
+            </div>
+
+            <!-- select -->
+            <div class="row mb-3">
+                <div class="col-md-6 offset-md-3">
+                    <label for="station" class="text-muted mb-1 small">Tell us where you are going</label>
+                    <select class="form-select" aria-label="Default select example" id="station3">
+                        <option selected>Choose your station</option>
+                        <option value="morzine3">Morzine</option>
+                        <option value="tignes3">Tignes</option>
+                        <option value="tania3">La Tania</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- text appears when station selected -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <p class="mb-2 section-title" id="title"
+                        style="font-family: hero-new, sans-serif; font-weight: 500; font-size: 24px;"></p>
+                    <p class="px-3 px-lg-5 py-4 col-lg-8 offset-lg-2" id="display"
+                        style="font-family: hero-new, sans-serif;"></p>
+                </div>
+            </div>
+
+            <!-- images grid appears when station selected -->
+            <div class="row mb-3">
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <img src="media/ski-page/blank.jpg" alt="ski station" class="fullwidth" id="photo1">
+                </div>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <img src="media/ski-page/blank.jpg" alt="ski station" class="fullwidth" id="photo2">
+                </div>
+                <div class="col-lg-4">
+                    <img src="media/ski-page/blank.jpg" alt="ski station" class="fullwidth" id="photo3">
+                </div>
+            </div>
+
+            <!-- text appears when station selected -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="px-3 px-lg-5 py-4 col-lg-8 offset-lg-2" id="display2"
+                        style="font-family: hero-new, sans-serif;"></p>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <img src="media/ski-page/blank.jpg" alt="map station" id="skimap" class="fullwidth">
+                </div>
+                <div class="col-lg-6">
+                    <img src="media/ski-page/blank.jpg" alt="ski station" id="skistation" class="fullwidth">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- /////////////////////////// FOOTER ////////////////////////////// -->
+    <footer class="bg-dark py-3 ">
+        <div class="container text-center">
+            <div class="row ">
+                <div class="col-md-6 d-md-flex justify-content-start">
+                    <p class="text-white my-0">Today: <span id="today"></span></p>
+                </div>
+                <div class="col-md-6 pt-2 pb-2 pb-md-0 d-md-flex justify-content-end">
+                    <p class="text-white my-0 " id="footer-text">&copy; Winter Adventures, 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- /////////////////////////// EXTERNAL CUSTOM JS ////////////////////////////// -->
+    <script src="scripts/storage-weather.js"></script>
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/canvas.js"></script>
+    <script src="scripts/javascript2020.js"></script>
+
+    <!-- /////////////////////////// BOOTSTRAP SCRIPT ////////////////////////////// -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

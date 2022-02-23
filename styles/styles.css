@@ -1,0 +1,240 @@
+/* http://winteradventures.infinityfreeapp.com */
+
+
+/*/////////////////////// GENERAL ////////////////////////////////*/
+
+* {
+    --blue-: #008ed6;
+    --font-: hero-new, sans-serif;
+    /* font weight from 100 to 800 */
+}
+
+/* fonts settings */
+body {
+    font-family: var(--font-);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.9;
+    height: 100vh;
+    color: #313131;
+}
+
+#title {
+    font-size: 5em;
+    font-weight: 100;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+h6 {
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+/* .h5 {
+    font-weight: 500;
+} */
+
+/* navbar */
+nav {
+    opacity: 0.9;
+}
+
+.navbar {
+    border-bottom: solid 4px var(--blue-);
+}
+
+#navigation {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.flake_icon{
+    width: 60px;
+}
+
+#myCanvas {
+    margin-top: 2px;
+    width: 20%;
+    height: 30%;
+}
+
+/*//////////////////////////// HOME PAGE //////////////////////// */
+
+/* image starts under the navbar */
+#home {
+    position: relative;
+    top: -70px;
+}
+
+/* darken video */
+video {
+    filter: brightness(0.6);
+    width: 100%;
+}
+
+/* text overlay centered */
+#text-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* clip path properties */
+#clip-me {
+    -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+    clip-path: ellipse(50% 50% at 50% 50%);
+    width: 100%;
+    height: auto;
+}
+
+.checkbox {
+    width: 40px;
+    margin: auto;
+    display: block;
+}
+
+/* footer */
+#footer-text {
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1em;
+}
+
+#more {
+    line-height: 1em;
+}
+
+#mobile-header {
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+/* API */
+
+.weatherIcon {
+    width: 50px;
+}
+
+#mapTania, #mapMorzine, #mapTignes {
+    height: 600px;
+    width: 100%;
+}
+
+
+/*///////////////////////////// SKI PAGE ////////////////////////*/
+
+#random-image,
+.fullwidth {
+    width: 100%;
+}
+
+#random {
+    top: -70px;
+    position: relative;
+}
+
+#skinav {
+    border-bottom: none;
+}
+
+.flakes {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+.section-title {
+    font-weight: 700;
+}
+
+/*////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////// MEDIA QUERIES ////////////////////////*/
+
+/* EXTRA LARGE BOOTSTRAP BREAKPOINT */
+@media only screen and (max-width: 1200px) {
+    #title {
+        font-size: 4em;
+    }
+}
+
+/* LARGE BOOTSTRAP BREAKPOINT -
+image starts after navbar and opacity back to maximum */
+@media only screen and (max-width: 992px) {
+    #home {
+        top: 0;
+    }
+
+    nav {
+        opacity: 1;
+    }
+
+    #title {
+        font-size: 3em;
+    }
+    #text-container {
+        top: 30%;
+    }
+}
+
+/* MEDIUM BOOTSTRAP BREAKPOINT */
+@media only screen and (max-width: 768px) {
+    #title {
+        font-size: 2.5em;
+    }
+
+    h6 {
+        font-size: 0.8em;
+    }
+
+    /* ski page navbar background colour when collapsed */
+    #skinav {
+        background-color: #313131;
+    }
+
+    #random {
+        top: 0;
+    }
+
+    .flakes {
+        width: 100%;
+    }
+
+    .icons {
+        width: 60%;
+    }
+    #text-container {
+        top: 25%;
+    }
+
+    #mapTania, #mapMorzine, #mapTignes  {
+        height: 400px;
+    }
+}
+
+/* SMALL BOOTSTRAP BREAKPOINT */
+@media only screen and (max-width: 576px) {
+    #title {
+        font-size: 1.5em;
+        font-weight: 200;
+    }
+    #text-container {
+        top: 20%;
+    }
+
+    #mapTania, #mapMorzine, #mapTignes  {
+        height: 300px;
+    }
+}
+
