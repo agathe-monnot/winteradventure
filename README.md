@@ -1,3 +1,5 @@
+College project
+
 Building a Bootstrap website for Winter Adventure, a fictional holiday retailer, and add interactivity using JavaScript and APIs.
 
 The style guide and wireframes were provided and to be followed for most of the pages.
